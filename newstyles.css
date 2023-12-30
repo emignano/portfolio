@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto+Condensed:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: #FF8066;
+    opacity: .8;
+  }
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #101010;
+    overflow-x: hidden;
+}
+
+.opening {
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;
+    position: absolute;
+    margin: 20px 20px;
+    color: #FF8066;
+}
+
+.scrollWheel img {
+    filter: invert(1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 150px;
+    padding: 10px;
+
+}
+
+header {
+    position: fixed;
+    z-index: 1050;
+    width: 550px;
+    /* background-color: #101010; */
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+header nav {
+    max-width: 50%;
+    margin: 0px auto;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: left;
+    transform: rotate(-90deg) translate3d(-100%,-800%,0);
+    
+}
+
+header ul {
+    display: inline-flex;
+    list-style: none;
+    column-gap: 40px;
+    text-wrap: wrap;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #d9d9d9;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+.hoverAnimation {
+    display: inline-block;
+    position: relative;
+}
+
+.hoverAnimation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF8066;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hoverAnimation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.test {
+    margin: 200px auto;
+    width: 50%;
+}
+
+
+/* .portfolioGrid {
+    width:60%;
+    margin: 10px auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 4rem;
+} */
+
+
+.project_box {
+    width: 700px;
+    height: 700px;
+
+    border-radius: 15px;
+    background-color: #1b1b1b;
+    /* box-shadow: -8px 8px #101010, -10px 10px #d9d9d9; */
+    overflow: hidden;
+    transition: transform .3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+/* .imageContainer {
+    max-height: 45%;
+} */
+
+.info {
+    padding: 20px;
+    color: #d9d9d9;
+    font-size: 16px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    column-gap: 20px;
+    row-gap: 15px;
+}
+
+.skills p {
+    padding: 0px 0px;
+}
+
+.project_title {
+    max-width: fit-content; 
+}
+
+.project_img {
+    width: 650px;
+    margin: auto;
+    max-height: 60%; 
+    /* object-fit: fill; */
+}
+
+.project_box:hover {
+    transform: scale(1.07);
+    
+}
