@@ -59,7 +59,7 @@ timeline.to(
 timeline.to(
     '.train', 
     {
-        left: -200,
+        left: -600,
         duration: 7,
         delay: 5,
         ease: 'power1.out',

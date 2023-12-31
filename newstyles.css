@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto+Condensed:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 *, *::before, *::after {
     padding: 0;
@@ -12,91 +12,9 @@
   }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Karla', sans-serif;
     background-color: #101010;
     overflow-x: hidden;
-}
-
-.opening {
-    position: relative;
-    height: 90vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-.logo {
-    width: 150px;
-    position: absolute;
-    margin: 20px 20px;
-    color: #FF8066;
-}
-
-.scrollWheel img {
-    filter: invert(1);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -0%);
-    width: 150px;
-    padding: 10px;
-
-}
-
-header {
-    position: fixed;
-    z-index: 1050;
-    width: 550px;
-    /* background-color: #101010; */
-    padding-top: 25px;
-    padding-bottom: 15px;
-}
-
-header nav {
-    max-width: 50%;
-    margin: 0px auto;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: left;
-    transform: rotate(-90deg) translate3d(-100%,-800%,0);
-    
-}
-
-header ul {
-    display: inline-flex;
-    list-style: none;
-    column-gap: 40px;
-    text-wrap: wrap;
-}
-
-header ul a {
-    text-decoration: none;
-    color: #d9d9d9;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-
-.hoverAnimation {
-    display: inline-block;
-    position: relative;
-}
-
-.hoverAnimation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background-color: #FF8066;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.hoverAnimation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
 }
 
 .test {
@@ -105,40 +23,25 @@ header ul a {
 }
 
 
-/* .portfolioGrid {
-    width:60%;
-    margin: 10px auto;
-    height: auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 4rem;
-    row-gap: 4rem;
-} */
-
-
 .project_box {
     width: 700px;
     height: 700px;
-
     border-radius: 15px;
-    background-color: #1b1b1b;
-    /* box-shadow: -8px 8px #101010, -10px 10px #d9d9d9; */
+    box-shadow:inset 0px 0px 1px 1px rgb(22, 22, 22);
     overflow: hidden;
     transition: transform .3s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
 }
 
-/* .imageContainer {
-    max-height: 45%;
-} */
-
 .info {
-    padding: 20px;
+    padding-top: 10px;
     color: #d9d9d9;
     font-size: 16px;
+}
+
+.faded {
+    opacity: .5;
 }
 
 .skills {
@@ -146,26 +49,42 @@ header ul a {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    column-gap: 20px;
+    column-gap: 5px;
     row-gap: 15px;
+    opacity: .7;
+    padding-top: 10px;
 }
 
 .skills p {
-    padding: 0px 0px;
+    padding: 2px 10px;
+    border-radius: 15px;
+    /* border: 1px solid white; */
+    background-color: #202020;
 }
 
 .project_title {
     max-width: fit-content; 
+    font-size: 40px;
+}
+
+.secondary_text {
+    font-size: 28px;
 }
 
 .project_img {
     width: 650px;
     margin: auto;
-    max-height: 60%; 
+    /* max-height: 60%;  */
+    border-radius: 10px;
+    position: relative;
     /* object-fit: fill; */
 }
 
-.project_box:hover {
-    transform: scale(1.07);
-    
+.button {
+    /* border: 1px soild #d9d9d9; */
+    padding: 10px 5px;
+}
+
+.project_box:hover .button{
+    color: #FF8066;
 }
