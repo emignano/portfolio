@@ -323,22 +323,19 @@ header ul a {
 
 
 
-
+/* 
 .portfolio, .research {
     width: 100vw;
     height: auto; 
-}
+} */
 
 .portfolioGrid {
-    width:60%;
-    margin: 10px auto;
-    height: auto;
+
     position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 4rem;
-    row-gap: 4rem;
+
 }
 
 
@@ -406,6 +403,18 @@ header ul a {
 
 .project_box:hover .button{
     color: #FF8066;
+}
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 1,
+  'opsz' 24;
+  color: var(--main_color);
+  transform: scale();
 }
 
 
