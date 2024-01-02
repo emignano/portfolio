@@ -87,7 +87,7 @@ header ul a {
     color: #d9d9d9;
     /* text-transform: uppercase; */
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 
@@ -253,6 +253,7 @@ header ul a {
 
 .jobLabels {
     padding-top: 75px;
+
 }
 
 .occupation {
@@ -260,6 +261,8 @@ header ul a {
     color: var(--main_color);
     font-size: 120px;
     overflow: hidden;
+    transform: translate(-8px, -20px);
+
 }
 
 .main {
@@ -280,6 +283,7 @@ header ul a {
     background-color: var(--accent_color);
     z-index: -1;
     animation: mainhighlight 2s ease-in-out 1;
+    /* transform: translate(-8px, 0px); */
 }
 
 .second-line {
@@ -323,31 +327,33 @@ header ul a {
 
 
 
-/* 
+
 .portfolio, .research {
     width: 100vw;
     height: auto; 
-} */
-
-.portfolioGrid {
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
 }
 
+.left {
+    justify-content: left;
+    justify-self: left;
+}
+
+.right {
+    justify-content: end;
+}
 
 .project_box {
-    width: 700px;
-    height: 700px;
+    width: 900px;
+    height: auto;
     border-radius: 15px;
-    box-shadow:inset 0px 0px 1px 1px rgb(22, 22, 22);
+    /* box-shadow:inset 0px 0px 1px 1px rgb(22, 22, 22); */
     overflow: hidden;
     transition: transform .3s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 75px;
 }
 
 .info {
@@ -388,7 +394,7 @@ header ul a {
 }
 
 .project_img {
-    width: 650px;
+    width: 900px;
     margin: auto;
     /* max-height: 60%;  */
     border-radius: 10px;
@@ -406,18 +412,6 @@ header ul a {
 }
 
 
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 1,
-  'opsz' 24;
-  color: var(--main_color);
-  transform: scale();
-}
-
-
 /* .skills p:hover {
     background-color: #d9d9d9;
     color: black;
@@ -429,14 +423,14 @@ header ul a {
 
 .break {
     position: relative;
-    margin-top: 100px;
-    height: 4px;
-    width: 40%;
+    margin: 150px 0px;
+    height: 1px;
+    width: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--main_color);
 }
 
 .weather {
@@ -501,20 +495,42 @@ header ul a {
 
 
 
+.footer {
+    border-top: 1px solid var(--main_color);
+    width: var(--container-width);
+    height: 150px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    color: var(--main_color);
+    
+}
 
+.footer a {
+    align-items: center;
+    padding-top: 10px;
+    display: flex;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--main_color);
 
+}
 
+.footer a svg {
+    padding-right: 4px;
+    fill: var(--main_color);
+}
 
+.ethos {
+    justify-content: end;
+}
 
-
-
-
-
-
-
-
-
-
+.footer a:hover svg {
+    fill: var(--accent_color);
+    transition: .5s 
+}
 
 
 
@@ -593,41 +609,41 @@ header ul a {
       width: 0;
     }
     35% {
-      top: -180px;
+      top: -155px;
       width: 0;
     }
     38% {
-      top: -180px;
+      top: -155px;
       
     }
     48% {
-      top: -180px;
+      top: -155px;
       width: 800px;
     }
     62% {
-      top: -180px;
+      top: -155px;
       width: 800px;
     }
     66% {
-      top: -180px;
+      top: -155px;
       width: 0;
       text-indent: 0;
     }
     71% {
-      top: -344px;
+      top: -294px;
       width: 0;
       /* text-indent: 5px; */
     }
     86% {
-      top: -344px;
+      top: -294px;
       width: 1050px;
     }
     95% {
-      top: -344px;
+      top: -294px;
       width: 1050px;
     }
     98% {
-      top: -344px;
+      top: -294px;
       width: 0;
       /* text-indent: 5px; */
     }
