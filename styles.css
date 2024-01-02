@@ -426,10 +426,6 @@ header ul a {
     margin: 150px 0px;
     height: 1px;
     width: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    border-radius: 4px;
     background-color: var(--main_color);
 }
 
