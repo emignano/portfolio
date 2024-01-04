@@ -94,7 +94,7 @@ svg {
 
 .aboutsection img {
     width: 750px; 
-    margin-right: 50px;
+    /* margin-right: 50px; */
     border-radius: 15px; 
     padding: 10px;
     box-shadow: -5px 5px 0px 0px var(--main_color), inset 0px 0px 0px 1px var(--main_color);
@@ -104,12 +104,13 @@ svg {
 }
 
 .picturesection {
-    width: 750px;
+    width: 750px; 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-right: 50px;
 }
 
 .caption {
@@ -746,41 +747,40 @@ header ul a {
 .skillsLogos {
     overflow: hidden;
     padding: 60px 0;
-    background: white;
+    background: rgba(0, 0, 0, 0);
     white-space: nowrap;
     position: relative;
+    width: var(--container-width);
   }
   
 .skillsLogos:before,
 .skillsLogos:after {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 5px;
     height: 100%;
     content: "";
     z-index: 2;
-  }
+    
+  } 
   
 .skillsLogos:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background-color: var(--main_color);
   }
   
 .skillsLogos:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
+    background-color: var(--main_color);
+ }
   
-.skillsLogos:hover .logosSlide {
-    animation-play-state: paused;
-  }
-  
+
 .logosSlide {
     display: inline-block;
-    animation: 35s slide infinite linear;
+    animation: 40s slide infinite linear 2s;
   }
   
 .logosSlide img {
-    height: 50px;
-    margin: 0 40px;
+    height: 125px;
+    margin: 0 30px;
   }
