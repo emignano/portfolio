@@ -35,13 +35,38 @@ window.addEventListener('mousemove', (e) => {
     update(e.clientX);
 })
 
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+var r = document.querySelector(':root');
 
-// let smoother = ScrollSmoother.create({
-//     wrapper: '.smooth-wrapper',
-//     content: '.smooth-content'
-// })
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
+  // Alert the value of the --blue variable
+  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+}
 
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+
+    
+
+  document.body.classList.toggle('dark-theme');
+  parallex_el.forEach(el => {
+    if (el.style.filter === 'invert(1)') {
+        el.style.filter = "invert(0)"
+    } else {
+        el.style.filter = "invert(1)"
+    }
+
+})
+
+
+
+}
+
+// var copy = document.querySelector(".logosSlide").cloneNode(true);
+// document.querySelector(".skillsLogos").appendChild(copy);
 
 
 
@@ -84,4 +109,5 @@ timeline.to(
 );
 
 
-
+var copy = document.querySelector(".logosSlide").cloneNode(true);
+document.querySelector(".skillsLogos").appendChild(copy);
