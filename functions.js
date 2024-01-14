@@ -65,49 +65,45 @@ function myFunction_set() {
 
 }
 
-// var copy = document.querySelector(".logosSlide").cloneNode(true);
-// document.querySelector(".skillsLogos").appendChild(copy);
+
+if (document.getElementsByClassName('.train')) {
+    let timeline = gsap.timeline({repeat: -1});
+
+    timeline.to(
+        '.train', 
+        {
+            opacity: 100
+        },
+        '<'
+    );
 
 
+    timeline.to(
+        '.train', 
+        {
+            left: -600,
+            duration: 7,
+            delay: 5,
+            ease: 'power1.out',
+            opacity: 0
+        }
+    );
 
-let timeline = gsap.timeline({repeat: -1});
+    timeline.to(
+        '.train', 
+        {
+            left: -200,
+            opacity: 0
+        }
+    );
 
-timeline.to(
-    '.train', 
-    {
-        opacity: 100
-    },
-    '<'
-);
-
-
-timeline.to(
-    '.train', 
-    {
-        left: -600,
-        duration: 7,
-        delay: 5,
-        ease: 'power1.out',
-        opacity: 0
-    }
-);
-
-timeline.to(
-    '.train', 
-    {
-        left: -200,
-        opacity: 0
-    }
-);
-
-timeline.to(
-    '.train', 
-    {
-        left: '150%',
-        opacity: 0
-    }
-);
+    timeline.to(
+        '.train', 
+        {
+            left: '150%',
+            opacity: 0
+        }
+    );
+} 
 
 
-var copy = document.querySelector(".logosSlide").cloneNode(true);
-document.querySelector(".skillsLogos").appendChild(copy);
