@@ -146,6 +146,7 @@ svg {
 iframe {
     width: var(--container-width);
     height: 900px;
+    margin-top: 120px;
 }
 
 .picturegrid div {
@@ -168,7 +169,8 @@ iframe {
     font-size: smaller;
     color: var(--main_color);
     opacity: .7;
-    padding: 10px
+    padding: 10px;
+    text-align: center;
 }
 
 /* .scrollWheel img {
