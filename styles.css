@@ -10,7 +10,7 @@
     --background_color: #101010;
     --main_color: #EFEFEF;
     --accent_color: #FF8066;
-    --container-width: 1600px;
+    --container-width: 90vw;
     --lighter_background_color: #1a1a1a;
 }
 
@@ -66,8 +66,8 @@ body {
 }
 
 .header {
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 42px;
+    font-weight: 400;
     color: var(--main_color);
     text-wrap: wrap;
     line-height: 2.8rem;
@@ -96,6 +96,7 @@ body {
     margin: auto;
     color: var(--main_color);
     border-top: 1px solid var(--main_color);
+    row-gap: 50px;
 }
 
 svg {
@@ -107,8 +108,9 @@ svg {
 }
 
 .aboutsection .framed {
-    width: 750px; 
+    max-width: 750px; 
     /* margin-right: 50px; */
+    max-height: 700px;
     border-radius: 15px; 
     padding: 10px;
     /* box-shadow: -5px 5px 0px 0px var(--main_color), inset 0px 0px 0px 1px var(--main_color); */

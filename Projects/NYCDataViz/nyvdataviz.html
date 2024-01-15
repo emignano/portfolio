@@ -42,40 +42,143 @@
                 <P>Group Members: Rongyu Shen</P>
                 <p>Role: Frontend/Interaction Developer</p>
                 <p>Tools: VSCode, JavaScript, D3,js, NYC Open Data</p>
-                <p>Summary: </p>
+                <p>Summary: Over the course of 3 weeks, we had to come up with an urban inquiry, design a visualization to solve the question, iterate through our designs, and present our final concept.</p>
+                <p>Constraints: </p>
+                <ul>
+                    <li>Include at least two 2 interactions</li>
+                    <li>Intuitive Design</li>
+                </ul>
                 <p><a target="_blank" href="https://github.com/jonschwartzuofm/UT_402_Creative_Coding" class="link hoverAnimation">Code →</a></p>
             </div>
+            <div class="picturesection">
+                <img class='framed', src="/img/citylab.png" alt="">
+            </div>
         </div>
+
+        <div class="aboutsection">
+            <div class="message">
+                <p class="header">Creating HMW Question</p>
+                <p>During the first step of the project, we looked at some example databases and generated HWM questions based on interesting relationships we saw in the data. After making a couple of questions, we had to choose an area to focus on. Our group decided to pursue mobility. Below are the HWM and additional questions that guided our approach.</p>
+                <p><b>Final HWM</b>: How might we be able to visualize how New Yorkers move around NYC?</p>
+                <p>Research questions:</p>
+                <ul>
+                    <li>How do people move around NYC?</li>
+                    <li>What are the hotspots and patterns of the flow of traffic?</li>
+                </ul>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/HMW_Urban_Tech_and_Mobility.jpg" alt="">
+                <p class="caption">HMW questions from our Design Sprint Session</p>
+            </div>
+
+        </div>
+
+
+        <div class="aboutsection">
+            <div class="message">
+                <p class="header">Creating The Database</p>
+                <p>The data sets chosen were NYC Yellow Taxi Trips 2018 and NYC District Zones. Both datasets were pulled from NYC Open Data. Below are the steps on how the files were merged to create the final database where our visualization pulls from</p>
+            </div>
+            <div class="picturesection">
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0001.jpg" alt="">
+                <p class="caption">Original files and their content</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0002.jpg" alt="">
+                <p class="caption">Matching the ZONEID data with the PUID (Pickup ID) and DOID (Dropoff ID)</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0003.jpg" alt="">
+                <p class="caption">Creating an array of the information for each</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0004.jpg" alt="">
+                <p class="caption">Calculating the sum after creating all arrays to speed up processing time</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0005.jpg" alt="">
+                <p class="caption">Adding the created array's and sums back into the Zone Map unter the ZONEID</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0006.jpg" alt="">
+                <p class="caption">Naming the new information in the database</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="aboutsection">
+            <div class="message">
+                <p class="header">Choosing The Visual Structure</p>
+                <p>Choosing how we wanted to visualize the data was one challenge we faced during the ideation process. The goal was to make an easy to read map where patterns could be uncovered just by glancing at the surface, and then more in detail as the user interacts with the visualization.</p>
+                <p>How we wanted to do this went through multiple iterations. Using the Crazy 8's method, we prototyped node networks, bar charts, 3d pillars, and bubble circles. However, we felt these mediums were either too complex where it was deciphering trends, or too basic where further analysis through interactions were hard to incorporate. </p>
+                <p>In our final iteration, we decided to use a Choropleth map as our medium. Our data was location based, and while the previous design iterations could represent the data, our focus was on the movement of people around NYC, and a Choropleth map gave the flexibility to show the data on the surface and the ability to incorporate further user interactions.</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/Crazy_8s_Enzo.jpg" alt="">
+                <p class="caption">My messy Crazy 8's output</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/colorsvs.png" alt="">
+                <p class="caption">Final Color Graidents</p>
+            </div>
+            <div class="message">
+                <p class="header">Choosing Colors</p>
+                <p>Choosing the right colors was also a major consideration. The issue was there were two types of information that needed to be seen: Incoming and Outgoing taxi trips. Our final color palette was chosen for the following reasons:</p>
+                <ul>
+                    <li><p>Colors show the intensity of the data by using cooler colors for low traffic and warmer colors for high traffic. They also humans perceived notion of color definitions</p></li>
+                    <li><p>Similar but different for the two types of data to show the relationship but also keeping them separate</p></li>
+                </ul>
+            </div>
+            <div class="message">
+                <p class="header">Tool Tip Creation</p>
+                <p>The tool tip was the first interaction implemented and was designed to give further analysis on the different districts. Its position on the map was off to the side to not cover any of the information, and was locked in the same place to limit eye movement. In addition, the top three districts are only shown to keep the tooltip concise.</p>
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/tooltip.png" alt="">
+            </div>
+            <div class="picturesection">
+                <img class='framed', src="/Projects/NYCDataViz/datavizpics/ezgif-2-29328441e5.gif" alt="">
+            </div>
+            <div class="message">
+                <p class="header">Clicking/Hovering Interaction</p>
+                <p>Clicking and Hovering mechanics were also implemented into the final design.</p>
+                <ul>
+                    <li><p>Clicking: Changed information between incoming and outgoing traffic. It also changed the color palette the represent the right information</p></li>
+                    <li><p>Hovering: Highlights the district to make it easy to see on the map. Also displayed the tool tip</p></li>
+                </ul>
+            </div>
+            
+            
+        
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
         
 
-        <div class="picturegrid" style="margin-top: 0px;">
-            <div>
-                <img loading='lazy' src="/Projects/canvasredesign/canvapic/Frame 35.png" alt="">
-                <p class="caption">Task flow 1</p>
-            </div>
-            <div>
-                <img loading='lazy' src="/Projects/canvasredesign/canvapic/Frame 97.png" alt="">
-                <p class="caption">Task flow 2</p>
-            </div>
-            <div>
-                <img loading='lazy' src="/Projects/canvasredesign/canvapic/Frame 112.png" alt="">
-                <p class="caption">Data from first round testing</p>
-            </div>
-            <div>
-                <img loading='lazy' src="/Projects/canvasredesign/canvapic/Frame 98.png" alt="">
-                <p class="caption">Initial improved taskflow</p>
-            </div>
-            <div>
-                <img loading='lazy' src="/Projects/canvasredesign/canvapic/Frame 106.png" alt="">
-                <p class="caption">Data from second round user testing</p>
-            </div>         
-        </div>
+<!--         
         <img loading='lazy' class="large" src="/Projects/canvasredesign/canvapic/Frame 8.png" alt="">
-        <p class="caption">Final Task Flow Visualized</p>
-
-        <iframe loading='lazy'  style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaH0EoxDaougI3fOEKManac%2FUT-330-Assignment-3%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D21-153%26viewport%3D-66%252C-374%252C0.06%26t%3DoZNfCOGSvO64rent-1%26scaling%3Dmin-zoom%26starting-point-node-id%3D1%253A938%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen></iframe>
-
+        <p class="caption">Final Task Flow Visualized</p> -->
 
 
             
