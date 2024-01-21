@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enzo's Portfolio</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" href="img/cube-2-1.png">
+    <link rel="stylesheet" href="/projectstyles.css">
+    <link rel="icon" href="/img/cube-2-1.png">
 </head>
 <body>
     <div class="pattern"></div>
@@ -29,181 +29,188 @@
                 </ul>
             </nav>
     </header>
-
-    <div class="container">
-        <main>
-        
-        <div class="aboutsection">
-            <div class="message">
-                <p class="header">CityLab Metrics: NYC Taxi Trip Visualization</p>
-                <p>Course: UT 402 Creative Coding</p>
-                <p>Professor: <a target="_blank" href="https://www.linkedin.com/in/jonoschwartz/" class="link hoverAnimation">Jonathan O. Schwartz</a></p>
-                <p>Date: Fall 2023</p>
-                <P>Group Members: Rongyu Shen</P>
-                <p>Role: Frontend/Interaction Developer</p>
-                <p>Tools: VSCode, JavaScript, D3,js, NYC Open Data</p>
-                <p>Summary: Over the course of 3 weeks, we had to come up with an urban inquiry, design a visualization to solve the question, iterate through our designs, and present our final concept.</p>
-                <p>Constraints: </p>
-                <ul>
-                    <li>Include at least two 2 interactions</li>
-                    <li>Intuitive Design</li>
-                </ul>
-                <p><a target="_blank" href="https://github.com/jonschwartzuofm/UT_402_Creative_Coding" class="link hoverAnimation">Code →</a></p>
-            </div>
-            <div class="picturesection">
-                <img class='framed', src="/img/citylab.png" alt="">
-            </div>
+    <div class="spacer"></div>
+    <main>
+        <div class="project-header">
+            <img src="/img/citylab.png" alt="" style="object-position: 100% -100px;">
         </div>
-
-        <div class="aboutsection">
-            <div class="message">
-                <p class="header">Creating HMW Question</p>
-                <p>During the first step of the project, we looked at some example databases and generated HWM questions based on interesting relationships we saw in the data. After making a couple of questions, we had to choose an area to focus on. Our group decided to pursue mobility. Below are the HWM and additional questions that guided our approach.</p>
-                <p><b>Final HWM</b>: How might we be able to visualize how New Yorkers move around NYC?</p>
-                <p>Research questions:</p>
-                <ul>
-                    <li>How do people move around NYC?</li>
-                    <li>What are the hotspots and patterns of the flow of traffic?</li>
-                </ul>
+        <div class="content">
+            <div class="section">
+                <div class="text-breaker"></div>
+                <div class="text">
+                    <p class="header">CityLab Metrics: NYC Taxi Trip Visualization</p>
+                    <span class="info">
+                        <p>Course: UT 402 Creative Coding</p>
+                        <p>Professor: <a target="_blank" href="https://www.linkedin.com/in/jonoschwartz/" class="link hoverAnimation">Jonathan O. Schwartz</a></p>
+                        <p>Date: Fall 2023</p>
+                        <P>Group Members: Rongyu Shen</P>
+                        <p>Role: Frontend/Interaction Developer</p>
+                        <p>Tools: VSCode, JavaScript, D3,js, NYC Open Data</p>
+                        <p>Constraints: </p>
+                        <ul>
+                            <li>Include at least two 2 interactions</li>
+                            <li>Intuitive Design</li>
+                        </ul>
+                        <p><a target="_blank" href="https://github.com/jonschwartzuofm/UT_402_Creative_Coding" class="link hoverAnimation">Code →</a></p>     
+                </div>
+                <div class="text-breaker"></div>
+                <div class="text">
+                    <p><span class="hook">In my opinion</span>, one of the most vital chaotic systems embedded within the urban landscape is how and where people choose to move around. Understanding the underlying cause of the behavior in this system can unlock new opportunities to upgrade existing infrastructure to better fit the needs of the people.</p>
+                    <p>The aim of this project was for users to follow a story. A story of trips, public transportation, and the lively movement of millions of people in a dense urban environment. It’s meant to generate questions like “Why is this area so congested?” or “Why are most people coming from this district?” The interactive elements are supposed to allow users to develop their own urban inquiry of movement - their own story line - and follow it through the NYC districts until they reach their destination.</p>
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/HMW_Urban_Tech_and_Mobility.jpg" alt="">
-                <p class="caption">HMW questions from our Design Sprint Session</p>
+
+
+            <div class="image-video hidden-up">
+                <video autoplay loop>
+                    <source src="/Projects/NYCDataViz/datavizpics/datavizdemo.mp4" type="video/mp4">
+                </video>
             </div>
 
-        </div>
-
-
-        <div class="aboutsection">
-            <div class="message">
-                <p class="header">Creating The Database</p>
-                <p>The data sets chosen were NYC Yellow Taxi Trips 2018 and NYC District Zones. Both datasets were pulled from NYC Open Data. Below are the steps on how the files were merged to create the final database where our visualization pulls from</p>
+            <div class="section">
+                <div class="text-breaker"></div>
+                <div class="text">
+                    <p class="header">Creating HMW Question</p>
+                    <p>During the first step of the project, we looked at some example databases and generated HWM questions based on interesting relationships we saw in the data. After making a couple of questions, we had to choose an area of focus to help guide our approach. Our group decided to pursue mobility.</p>
+                    <p><b>Final HWM:</b> How might we be able to visualize how New Yorkers move around NYC?</p>
+                    <p>We also developed further reserach questions to help with the context of our project</p>
+                    <ol>
+                        <li><p>How do people move around NYC?</li>
+                        <li><p>What are the hotspots and patterns of the flow of traffic?</li>
+                    </ol>
+                    <p>Our main objective was to create a tool that was both easy to use and informative about the urban space to the user.</p>
+                </div>
+                <div class="image-small">
+                    <img src="/Projects/NYCDataViz/datavizpics/HMW_Urban_Tech_and_Mobility.jpg" alt="">
+                </div>
             </div>
-            <div class="picturesection">
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Creating The Database</p>
+                    <p>The data sets chosen were NYC Yellow Taxi Trips 2018 and NYC District Zones. Both datasets were pulled from NYC Open Data. JavaScript and d3.js was used to merge the databases together. Below are the steps on how the files were merged to create the final database where our visualization pulls from:</p>
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0001.jpg" alt="">
-                <p class="caption">Original files and their content</p>
+
+            <div class="grid">
+                <div class="pic-grid">
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0001.jpg" alt="">
+                        <p class="caption">Original files and their content</p>
+                    </div>
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0002.jpg" alt="">
+                        <p class="caption">Matching the ZONEID data with the PUID (Pickup ID) and DOID (Dropoff ID)</p>
+                    </div>
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0003.jpg" alt="">
+                        <p class="caption">Creating an array of the information for each</p>
+                    </div>
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0004.jpg" alt="">
+                        <p class="caption">Calculating the sum after creating all arrays to speed up processing time</p>
+                    </div>
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0005.jpg" alt="">
+                        <p class="caption">Adding the created array's and sums back into the Zone Map unter the ZONEID</p>
+                    </div>
+                    <div class="image-grid">
+                        <img class='', src="/Projects/NYCDataViz/datavizpics/0006.jpg" alt="">
+                        <p class="caption">Naming the new information in the database</p>
+                    </div>
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0002.jpg" alt="">
-                <p class="caption">Matching the ZONEID data with the PUID (Pickup ID) and DOID (Dropoff ID)</p>
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Choosing The Visual Structure</p>
+                    <p>Choosing how we wanted to visualize the data was one challenge we faced during the ideation process. The goal was to make an easy to read map where patterns could be uncovered just by glancing at the surface, and then more in detail as the user interacts with the visualization.</p>
+                    <p>How we wanted to do this went through multiple iterations. Using the Crazy 8's method, we prototyped node networks, bar charts, 3d pillars, and bubble circles. However, we felt these mediums were either too complex when deciphering trends, or too basic where further analysis through interactions were hard to incorporate.</p>
+                    <p>In our final iteration, we decided to use a Choropleth map as our medium. Our data was location based, and while the previous design iterations could represent the data, our focus was on the movement of people around NYC, and a Choropleth map gave the flexibility to show the data on the surface and the ability to incorporate further user interactions.</p>
+                </div>
+                <div class="image-small">
+                    <img src="/Projects/NYCDataViz/datavizpics/Crazy_8s_Enzo.jpg" alt="">
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0003.jpg" alt="">
-                <p class="caption">Creating an array of the information for each</p>
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Choosing Colors</p>
+                    <p>Choosing the right colors was a major consideration. The issue was there were two types of information that needed to be seen: Incoming and Outgoing taxi trips. Our final color palette was chosen for the following reasons:</p>
+                    <ul>
+                        <li><p>The colors show the intensity of the data by using cooler colors for low traffic and warmer colors for high traffic. They also use societies perceived notion of color definitions.</li>
+                        <li><p>Similar but different palettes for the two types of data to show the relationship but also keeping them separate.</li>
+                    </ul>
+                </div>
+                <div class="image-small">
+                    <img src="/Projects/NYCDataViz/datavizpics/colors.jpg" alt="">
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0004.jpg" alt="">
-                <p class="caption">Calculating the sum after creating all arrays to speed up processing time</p>
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Tool Tip Creation</p>
+                    <p>The tool tip was the first interaction element implemented and was designed to give further analysis on the different districts. Its position on the map was off to the side to not cover any of the information, and was locked in the same place to limit eye movement. In addition, the top three districts are only shown to keep the tooltip concise.</p>
+                </div>
+                <div class="image-small">
+                    <img src="/Projects/NYCDataViz/datavizpics/tooltip.png" alt="">
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0005.jpg" alt="">
-                <p class="caption">Adding the created array's and sums back into the Zone Map unter the ZONEID</p>
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Tool Tip Creation</p>
+                    <p>Clicking and Hovering mechanics were also implemented into the final design.</p>
+                    <ul>
+                        <li><p><b>Clicking:</b> Changed information between incoming and outgoing traffic. It also changed the color palette to represent the right information</li>
+                        <li><p><b>Hovering:</b> Highlights the district to make it easy to see on the map. Also displayed the tool tip.</li>
+                    </ul>
+                </div>
+                <div class="image-small">
+                    <img src="/Projects/NYCDataViz/datavizpics/ezgif-2-29328441e5.gif" alt="">
+                </div>
             </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/0006.jpg" alt="">
-                <p class="caption">Naming the new information in the database</p>
+
+            <div class="section">
+                <div class="text">
+                    <p class="header">Compromises and Future Changes</p>
+                    <p>The time constraint to finish this project came very fast so we did not get a chance to fully implement everything that we wanted to. This led to us composing and prioritizing certain features over others in order to accomplish our end goal of making an interactive map where the user can follow a storyline. </p>
+                    <p>That being said, we still plan on editing this project in the future and below is a list of items that are on our radar:</p>
+                    <ul>
+                        <li><p>Better Zoom feature - users can zoom in but it's a bit wonky</li>
+                        <li><p>Optimized tooltip feature - Current one takes too much time to find and display the data</li>
+                        <li><p>Click changes legend/tooltip when switching from outgoing to incoming - Would add more relevent info to the visualization</li>
+                        <li><p>Add year slider - Allow users to see how movemnet has changed through the years</p></li>
+                        <li><p>Make 3D graph</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
 
 
-
-
-
-
-
-
-
-        <div class="aboutsection">
-            <div class="message">
-                <p class="header">Choosing The Visual Structure</p>
-                <p>Choosing how we wanted to visualize the data was one challenge we faced during the ideation process. The goal was to make an easy to read map where patterns could be uncovered just by glancing at the surface, and then more in detail as the user interacts with the visualization.</p>
-                <p>How we wanted to do this went through multiple iterations. Using the Crazy 8's method, we prototyped node networks, bar charts, 3d pillars, and bubble circles. However, we felt these mediums were either too complex where it was deciphering trends, or too basic where further analysis through interactions were hard to incorporate. </p>
-                <p>In our final iteration, we decided to use a Choropleth map as our medium. Our data was location based, and while the previous design iterations could represent the data, our focus was on the movement of people around NYC, and a Choropleth map gave the flexibility to show the data on the surface and the ability to incorporate further user interactions.</p>
-            </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/Crazy_8s_Enzo.jpg" alt="">
-                <p class="caption">My messy Crazy 8's output</p>
-            </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/colorsvs.png" alt="">
-                <p class="caption">Final Color Graidents</p>
-            </div>
-            <div class="message">
-                <p class="header">Choosing Colors</p>
-                <p>Choosing the right colors was also a major consideration. The issue was there were two types of information that needed to be seen: Incoming and Outgoing taxi trips. Our final color palette was chosen for the following reasons:</p>
-                <ul>
-                    <li><p>Colors show the intensity of the data by using cooler colors for low traffic and warmer colors for high traffic. They also humans perceived notion of color definitions</p></li>
-                    <li><p>Similar but different for the two types of data to show the relationship but also keeping them separate</p></li>
-                </ul>
-            </div>
-            <div class="message">
-                <p class="header">Tool Tip Creation</p>
-                <p>The tool tip was the first interaction implemented and was designed to give further analysis on the different districts. Its position on the map was off to the side to not cover any of the information, and was locked in the same place to limit eye movement. In addition, the top three districts are only shown to keep the tooltip concise.</p>
-            </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/tooltip.png" alt="">
-            </div>
-            <div class="picturesection">
-                <img class='framed', src="/Projects/NYCDataViz/datavizpics/ezgif-2-29328441e5.gif" alt="">
-            </div>
-            <div class="message">
-                <p class="header">Clicking/Hovering Interaction</p>
-                <p>Clicking and Hovering mechanics were also implemented into the final design.</p>
-                <ul>
-                    <li><p>Clicking: Changed information between incoming and outgoing traffic. It also changed the color palette the represent the right information</p></li>
-                    <li><p>Hovering: Highlights the district to make it easy to see on the map. Also displayed the tool tip</p></li>
-                </ul>
-            </div>
-            
-            
-        
-            
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-<!--         
-        <img loading='lazy' class="large" src="/Projects/canvasredesign/canvapic/Frame 8.png" alt="">
-        <p class="caption">Final Task Flow Visualized</p> -->
-
-
-            
-        </main>   
-    </div>
-    <div class="footer">
-        <div class="footerinfo">
-            <div>
-                <a target="_blank" href="https://www.linkedin.com/in/enzosmignano/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    <p class="hoverAnimation">Linkedin →</p></a>
-                <a target="_blank" href="https://github.com/emignano?tab=overview&from=2024-01-01&to=2024-01-01">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
-                    <p class="hoverAnimation">GitHub →</p></a>
-                </a>
-                <a href="mailto:emignano@umich.edu">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="24" width="24" version="1.1" id="Capa_1" viewBox="0 0 75.294 75.294" xml:space="preserve"><path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9   c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089   H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065   c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016   c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102   c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069   c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"/></svg>
-                    <p class="hoverAnimation">Email →</p></a>
-                </a>
-            </div>
-            <div>
-                <p class="ethos">✎ Built by Enzo Mignano</p>
-            </div>
-        </div>
-    </div>
+            <div class="footer">
+                <div class="footerinfo">
+                    <div>
+                        <a target="_blank" href="https://www.linkedin.com/in/enzosmignano/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <p class="hoverAnimation">Linkedin →</p></a>
+                        <a target="_blank" href="https://github.com/emignano?tab=overview&from=2024-01-01&to=2024-01-01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
+                            <p class="hoverAnimation">GitHub →</p></a>
+                        </a>
+                        <a href="mailto:emignano@umich.edu">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="24" width="24" version="1.1" id="Capa_1" viewBox="0 0 75.294 75.294" xml:space="preserve"><path d="M66.097,12.089h-56.9C4.126,12.089,0,16.215,0,21.286v32.722c0,5.071,4.126,9.197,9.197,9.197h56.9   c5.071,0,9.197-4.126,9.197-9.197V21.287C75.295,16.215,71.169,12.089,66.097,12.089z M61.603,18.089L37.647,33.523L13.691,18.089   H61.603z M66.097,57.206h-56.9C7.434,57.206,6,55.771,6,54.009V21.457l29.796,19.16c0.04,0.025,0.083,0.042,0.124,0.065   c0.043,0.024,0.087,0.047,0.131,0.069c0.231,0.119,0.469,0.215,0.712,0.278c0.025,0.007,0.05,0.01,0.075,0.016   c0.267,0.063,0.537,0.102,0.807,0.102c0.001,0,0.002,0,0.002,0c0.002,0,0.003,0,0.004,0c0.27,0,0.54-0.038,0.807-0.102   c0.025-0.006,0.05-0.009,0.075-0.016c0.243-0.063,0.48-0.159,0.712-0.278c0.044-0.022,0.088-0.045,0.131-0.069   c0.041-0.023,0.084-0.04,0.124-0.065l29.796-19.16v32.551C69.295,55.771,67.86,57.206,66.097,57.206z"/></svg>
+                            <p class="hoverAnimation">Email →</p></a>
+                        </a>
+                    </div>
+                    <div>
+                        <p class="ethos">✎ Built by Enzo Mignano</p>
+                    </div>
+                </div>
+            </div>    
+        </main> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/functions.js"></script>
     
 </body>
 </html>

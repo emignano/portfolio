@@ -1,7 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto+Condensed:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto+Condensed:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400&display=swap');
 
 
 :root {
@@ -34,7 +33,7 @@
   }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: var(--background_color);
     color: var(--main_color);
     font-weight: 300;
@@ -108,20 +107,24 @@ svg {
 }
 
 .aboutsection .framed {
-    max-width: 750px; 
+    max-width: 100%; 
     /* margin-right: 50px; */
     max-height: 700px;
-    border-radius: 15px; 
-    padding: 10px;
+    margin: 10px;
     /* box-shadow: -5px 5px 0px 0px var(--main_color), inset 0px 0px 0px 1px var(--main_color); */
     margin-bottom: 10px;
     /* background-color: var(--background_color); */
+    align-items: center;
     
+}
+
+.aboutsection .picturesection {
+    justify-content: center;
 }
 
 
 .aboutsection .clean {
-    width: 750px; 
+    width: 100%; 
     filter: drop-shadow(-10px 10px 5px black);
 }
 
@@ -140,8 +143,7 @@ svg {
 }
 
 .large {
-    max-width: var(--container-width);
-    padding: 40px;
+    max-width: 85vw;
 
 }
 
@@ -175,27 +177,51 @@ iframe {
     text-align: center;
 }
 
-/* .scrollWheel img {
-    filter: invert(1);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -0%);
-    width: 150px;
-    padding: 10px;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
-} */
 
 .container {
     max-width: var(--container-width);
-    min-width: 500px;
     margin: auto;
     display: flex;
     overflow: hidden;
+    justify-items: space-evenly;
 }
 
 .active {
     color: #FF8066;
+    text-align: left;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden {
+        opacity: 0;
+        transition: ease-in-out 1.5s;
+        transform: translateX(-100%);
+        filter: blur(2px);
+    }
     
+    
+    .hidden-right{
+        opacity: 0;
+        transition: ease-in-out 1.5s;
+        transform: translateX(100%);
+        filter: blur(2px);
+    }
+
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
 }
 
 
@@ -264,8 +290,9 @@ header ul a {
 .opening {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     overflow: hidden;
+
 }
 
 .opening img {
@@ -288,7 +315,7 @@ header ul a {
     z-index: -1;
     width: 125px;
     top: 25%;
-    left: calc(var(--container-width) - 300px );
+    left: calc(var(--container-width) - 500px );
     transform: translate(-50%, -50%);
     opacity: 100;
 }
@@ -482,6 +509,7 @@ header ul a {
     display: flex;
     padding: 0px 15px;
     width: var(--container-width);
+    margin: auto;
    
 }
 
@@ -558,7 +586,9 @@ header ul a {
 
 
 .projectgrid .project_box {
-    width: 500px;
+    max-width: 500px;
+    height: auto;
+    width: auto\9;
 }
 
 .projectgrid {
@@ -567,11 +597,13 @@ header ul a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: baseline;
+    width: inherit;
 }
 
 .projectgrid img {
-    height: 300px;
+    max-height: 300px;
     object-fit: cover;
+    width: 100%;
 }
 
 
@@ -618,6 +650,7 @@ header ul a {
     padding: 20px 10px;
     color: var(--main_color);
     margin: auto;
+    align-items: baseline;
     
 }
 
@@ -639,6 +672,7 @@ header ul a {
 
 .ethos {
     justify-content: end;
+    text-align: left;
 }
 
 .footer a:hover svg {
@@ -829,6 +863,7 @@ header ul a {
     margin: 10px;
     transition: 1s;
 }
+
 
 .skills-proficiencies {
     width: var(--container-width);

@@ -35,35 +35,52 @@ window.addEventListener('mousemove', (e) => {
     update(e.clientX);
 })
 
-var r = document.querySelector(':root');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } 
+        // else {
+        //     entry.target.classList.remove('show')
+        // }
+    })
+})
 
-// Create a function for getting a variable value
-function myFunction_get() {
-  // Get the styles (properties and values) for the root
-  var rs = getComputedStyle(r);
-  // Alert the value of the --blue variable
-  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
-}
+const hiddenElements = document.querySelectorAll('.hidden, .hidden-right, .hidden-up');
+hiddenElements.forEach((el) => observer.observe(el))
 
-// Create a function for setting a variable value
-function myFunction_set() {
-  // Set the value of variable --blue to another value (in this case "lightblue")
+// var r = document.querySelector(':root');
+
+// // Create a function for getting a variable value
+// function myFunction_get() {
+//   // Get the styles (properties and values) for the root
+//   var rs = getComputedStyle(r);
+//   // Alert the value of the --blue variable
+//   alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+// }
+
+// // Create a function for setting a variable value
+// function myFunction_set() {
+//   // Set the value of variable --blue to another value (in this case "lightblue")
 
     
 
-  document.body.classList.toggle('dark-theme');
-  parallex_el.forEach(el => {
-    if (el.style.filter === 'invert(1)') {
-        el.style.filter = "invert(0)"
-    } else {
-        el.style.filter = "invert(1)"
-    }
+//   document.body.classList.toggle('dark-theme');
+//   parallex_el.forEach(el => {
+//     if (el.style.filter === 'invert(1)') {
+//         el.style.filter = "invert(0)"
+//     } else {
+//         el.style.filter = "invert(1)"
+//     }
 
-})
+// })
 
 
 
-}
+// }
+
+
+
 
 
 if (document.getElementsByClassName('.train')) {
