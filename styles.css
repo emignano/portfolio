@@ -10,7 +10,7 @@
     --main_color: #EFEFEF;
     --accent_color: #FF8066;
     --container-width: 90vw;
-    --lighter_background_color: #1a1a1a;
+    --lighter_background_color: #414141;
 }
 
 
@@ -652,8 +652,8 @@ header ul a {
     height: fit-content;
     border-radius: 15px;
     /* overflow: hidden; */
-    transition: transform .3s;
-    transition-timing-function: ease-in-out;
+    /* transition: transform .3s;
+    transition-timing-function: ease-in-out; */
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
@@ -705,8 +705,7 @@ header ul a {
 }
 
 .button {
-    padding-top: 10px;
-    padding-left: 5px;
+    margin-top: 10px;
     width: fit-content;
 }
 
