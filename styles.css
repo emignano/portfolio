@@ -10,7 +10,7 @@
     --main_color: #EFEFEF;
     --accent_color: #FF8066;
     --container-width: 90vw;
-    --lighter_background_color: #414141;
+    --lighter_background_color: #272727;
 }
 
 
@@ -682,8 +682,8 @@ header ul a {
 }
 
 .skills p {
-    padding: 2px 10px;
-    border-radius: 15px;
+    padding: 6px 15px;
+    border-radius: 25px;
     /* border: 1px solid white; */
     color: #EFEFEF;
     background-color: var(--lighter_background_color);
