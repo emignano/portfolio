@@ -193,7 +193,7 @@ video {
 
 .header {
     font-size: 42px;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--main_color);
     text-wrap: wrap;
     line-height: 2.8rem;
@@ -436,7 +436,7 @@ header ul a {
     top: calc(68%);
     left: calc(var(--container-width) - (var(--container-width)/2));
     transform: translate(-50%, -50%);
-    /* opacity: .5; */
+    opacity: 1;
 
 }
 
@@ -670,6 +670,10 @@ header ul a {
     opacity: .4;
 }
 
+.project_box p {
+    padding: 5px 0px;
+}
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -698,15 +702,16 @@ header ul a {
 .project_img {
     width: 100%;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
     box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, .3);
     
 }
 
 .button {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     width: fit-content;
+    
 }
 
 .project_box:hover .button {
@@ -715,7 +720,7 @@ header ul a {
 
 
 .projectgrid .project_box {
-    max-width: 500px;
+    max-width: 700px;
     height: auto;
     width: auto\9;
 }
@@ -730,13 +735,13 @@ header ul a {
 }
 
 .projectgrid img {
-    max-height: 300px;
+    max-height: 400px;
     object-fit: cover;
     width: 100%;
 }
 
 
-.pattern{
+/* .pattern{
     background-color: var(--background_color);
     opacity: 0.1;
     background-image: radial-gradient(var(--main_color) 1px, var(--background_color) 1px);
@@ -745,7 +750,7 @@ header ul a {
     height: 100vh;
     z-index: -1;
     position: fixed;
-}
+} */
 
 
 
