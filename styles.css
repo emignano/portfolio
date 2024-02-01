@@ -10,7 +10,7 @@
     --main_color: #EFEFEF;
     --accent_color: #FF8066;
     --container-width: 90vw;
-    --lighter_background_color: #272727;
+    --lighter_background_color: #0e0e0e;
 }
 
 
@@ -1009,7 +1009,7 @@ header ul a {
 
 .software:hover {
     transform: scale(1.1);
-    transition: 1s;
+    transition: .5s;
     cursor: default;
 }
 
