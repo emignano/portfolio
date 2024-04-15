@@ -977,7 +977,7 @@ header ul a {
 .logosSlide {
     display: flex;
     flex-wrap: wrap;
-    width: calc(var(--container-width)/2);;
+    width: 100%;
   }
   
 .logosSlide img {
@@ -988,7 +988,7 @@ header ul a {
 .software {
     display: flex;
     flex-wrap: nowrap;
-    width: 220px;
+    width: 225px;
     align-items: center;
     background-color: var(--lighter_background_color);
     border-radius: 15px;
